@@ -30,7 +30,7 @@ const satoshi = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Near-FL",
+  title: "FederNear",
   description: "Federated learning built on Near",
 };
 

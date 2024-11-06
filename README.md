@@ -6,12 +6,16 @@
 
 <center><img src="./images/FederNear.png" alt="Federnear logo" height="220px"></img></center>
 
+<center>Read our wonderful docs <a href="https://federnear.gitbook.io/federnear">Here</a></center>
 
 FederNear is a decentralized platform built on the NEAR blockchain, enabling secure, privacy-preserving model training on distributed datasets. It ensures that sensitive data remains private by leveraging Pedersen commitments to keep model parameters (weights and biases) confidential during training.
 
 
 
 NEAR blockchain enables decentralized coordination, allowing nodes to participate in the training process while supporting on-chain aggregation of encrypted data.
+
+<img src="./images/1.png"></img>
+
 
 ## Key Features
 
@@ -26,6 +30,11 @@ NEAR blockchain enables decentralized coordination, allowing nodes to participat
 
 - **Encrypted Aggregation:**  
   After training, nodes submit their encrypted weights and biases, which NEAR-based smart contracts then aggregate on-chain, ensuring privacy during the aggregation process.
+
+
+<img src="./images/image.png"></img>
+
+
 
 ## Architecture Overview
 
@@ -51,4 +60,3 @@ NEAR blockchain enables decentralized coordination, allowing nodes to participat
 - **Decrypted Results:**  
   The model provider retrieves the final encrypted aggregated model and decrypts the weights using their private key.
 
-Through federated learning, FederNear provides secure, decentralized, and privacy-preserving model training, keeping sensitive information private and secure across the network of participating nodes.

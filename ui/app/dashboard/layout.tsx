@@ -21,7 +21,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
 
   const [wallet, setWallet] = useState("0x123456789");
-  const truncatedWallet = wallet?.slice(0, 6) + "..." + wallet?.slice(-6);
+  const truncatedWallet = "sahil.near"
 
   const [balance, setBalance] = useState(0.001);
 
@@ -31,7 +31,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         <header className="flex items-center justify-between bg-background py-1 shadow-sm">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2">
-              <span className="font-display text-lg ">Near-FL</span>
+              <span className="font-display text-lg ">FederNear</span>
             </Link>
             <nav className="hidden items-center gap-2 md:flex">
               {navItems.map((item, index) => (

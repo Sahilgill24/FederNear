@@ -13,7 +13,7 @@ from matplotlib.animation import FuncAnimation
 
 
 
-data = pd.read_csv('trialdata/data.csv')
+data = pd.read_csv('../trialdata/data1.csv')
 data.dropna(inplace=True)
 
 train_input = np.array(data.x[0:175]).reshape(175, 1)
