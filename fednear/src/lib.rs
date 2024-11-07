@@ -14,6 +14,7 @@ pub struct Aggregator {
     pub aggregation: IterableMap<u64, u64>,
     pub to: AccountId,
     pub amount: NearToken,
+    pub federatedaverage: u64,
 }
 
 impl Default for Aggregator {
@@ -23,6 +24,7 @@ impl Default for Aggregator {
             aggregation: IterableMap::new(b"a".to_vec()),
             to: env::current_account_id(),
             amount: NearToken::from_yoctonear(DEFAULT_AMOUNT),
+            federatedaverage: 0,
         }
     }
 }

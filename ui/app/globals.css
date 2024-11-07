@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.gradient-theme {
+  @apply from-primary to-highlight;
+}
+
+.underline-theme {
+  @apply bg-gradient-to-r gradient-theme bg-[length:100%_2px] bg-no-repeat bg-bottom;
+}
+
+.decorate-theme {
+  @apply relative after:absolute after:bg-gradient-to-r gradient-theme after:bottom-2 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-100
+}
+
+@layer base {
+  :root {
+    --background: 50 67% 100%;
+    --foreground: 50 55% 5%;
+    --muted: 50 23% 92%;
+    --muted-foreground: 50 8% 39%;
+    --popover: 50 67% 100%;
+    --popover-foreground: 50 55% 5%;
+    --card: 50 67% 100%;
+    --card-foreground: 50 55% 5%;
+    --border: 50 12% 95%;
+    --input: 50 12% 95%;
+    --primary: 50 98% 57%;
+    --primary-foreground: 50 98% 17%;
+    --secondary: 50 4% 81%;
+    --secondary-foreground: 50 4% 21%;
+    --accent: 50 4% 81%;
+    --accent-foreground: 50 4% 21%;
+    --destructive: 6 97% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 50 98% 57%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 50 22% 4%;
+    --foreground: 50 39% 100%;
+    --muted: 50 23% 8%;
+    --muted-foreground: 50 8% 61%;
+    --popover: 50 52% 4%;
+    --popover-foreground: 50 39% 100%;
+    --card: 50 52% 4%;
+    --card-foreground: 50 39% 100%;
+    --border: 50 12% 11%;
+    --input: 50 12% 11%;
+    --primary: 50 98% 57%;
+    --primary-foreground: 50 98% 17%;
+    --secondary: 50 15% 20%;
+    --secondary-foreground: 50 15% 80%;
+    --accent: 50 15% 20%;
+    --accent-foreground: 50 15% 80%;
+    --destructive: 6 97% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 50 98% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
