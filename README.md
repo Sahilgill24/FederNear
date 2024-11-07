@@ -1,4 +1,11 @@
+
+
+
 # FederNear: Privacy-Preserving Federated Learning Platform
+
+
+<center><img src="./images/FederNear.png" alt="Federnear logo" height="220px"></img></center>
+
 
 FederNear is a decentralized platform built on the NEAR blockchain, enabling secure, privacy-preserving model training on distributed datasets. It ensures that sensitive data remains private by leveraging Pedersen commitments to keep model parameters (weights and biases) confidential during training.
 
@@ -6,49 +13,42 @@ FederNear is a decentralized platform built on the NEAR blockchain, enabling sec
 
 NEAR blockchain enables decentralized coordination, allowing nodes to participate in the training process while supporting on-chain aggregation of encrypted data.
 
-
 ## Key Features
 
-### Blockchain Coordination (NEAR)
-The NEAR blockchain is integral to orchestrating the training process. It emits events, manages node registration, and facilitates the aggregation of encrypted data on-chain.
+- **Blockchain Coordination (NEAR):**  
+  The NEAR blockchain orchestrates the training process, emitting events, managing node registration, and facilitating on-chain aggregation of encrypted data.
 
-### Privacy-Preserving Model Training
-Pedersen commitments allow nodes to train models on their local datasets while ensuring confidentiality of both data and model parameters. This approach protects sensitive information during the entire training process.
+- **Privacy-Preserving Model Training:**  
+  Pedersen commitments enable nodes to train models locally on their datasets while keeping both the data and model parameters confidential. This ensures that sensitive information is protected throughout the training process.
 
-### Decentralized Node Participation
-Users can register as nodes to contribute to model training, leveraging their private datasets without revealing any data to others. This decentralized system encourages collaborative learning without the need to share data.
+- **Decentralized Node Participation:**  
+  Users can register as nodes to participate in model training using their private datasets without revealing any data. This decentralized system supports collaborative learning without the need to share data.
 
-### Encrypted Aggregation
-Once nodes train their models and submit encrypted weights and biases, NEAR-based smart contracts aggregate these encrypted values on-chain, maintaining privacy throughout the aggregation process.
+- **Encrypted Aggregation:**  
+  After training, nodes submit their encrypted weights and biases, which NEAR-based smart contracts then aggregate on-chain, ensuring privacy during the aggregation process.
 
 ## Architecture Overview
 
-### Server-Side (Model Provider)
+- **Server-Side (Model Provider):**
+  - **Upload Model:**  
+    The user (model provider) uploads a model (e.g., linear regression, neural network) and registers it on the NEAR blockchain.
+  - **Event Emission:**  
+    Once the model is registered, an event is emitted on the NEAR blockchain, notifying all registered nodes of the new model available for training.
 
-#### Upload Model:
-The user (model provider) uploads the model (e.g., linear regression, neural network) and registers it on the NEAR blockchain.
+- **Client-Side (Nodes):**
+  - **Node Registration:**  
+    Users can register their wallet address as nodes on the NEAR blockchain.
+  - **Data Processing:**  
+    Upon detecting a model registration event, a node retrieves the model parameters, loads its private dataset, and begins training.
+  - **Pedersen Commitments:**  
+    The trained model’s weights and biases are encrypted using Pedersen commitments to maintain confidentiality.
+  - **Encrypted Submission:**  
+    Nodes submit their encrypted weights and biases to the NEAR smart contract for aggregation.
 
-#### Event Emission:
-Once the model is registered, an event is emitted on the NEAR blockchain, notifying all registered nodes of the new model available for training.
+- **On-Chain Aggregation:**  
+  The NEAR smart contract aggregates encrypted results from multiple nodes without exposing any underlying data.
 
-### Client-Side (Nodes)
+- **Decrypted Results:**  
+  The model provider retrieves the final encrypted aggregated model and decrypts the weights using their private key.
 
-#### Node Registration:
-Users can register their wallet address as nodes on the NEAR blockchain.
-
-#### Data Processing:
-When a node detects the model registration event, it retrieves the model parameters, loads its private dataset, and initiates training.
-
-#### Pedersen Commitments:
-The trained model’s weights and biases are encrypted using Pedersen commitments, ensuring confidentiality.
-
-#### Encrypted Submission:
-Nodes submit their encrypted weights and biases to the NEAR smart contract for aggregation.
-
-### On-Chain Aggregation
-The NEAR smart contract aggregates encrypted results from multiple nodes without exposing any underlying data.
-
-### Decrypted Results
-The model provider retrieves the final encrypted aggregated model and decrypts the weights using their private key.
-
-Through federated learning, FederNear enables secure, decentralized, and privacy-preserving model training, ensuring that sensitive information remains private and secure across the network of participating nodes.
+Through federated learning, FederNear provides secure, decentralized, and privacy-preserving model training, keeping sensitive information private and secure across the network of participating nodes.
