@@ -4,6 +4,8 @@
 # FederNear: Privacy-Preserving Federated Learning Platform
 
 
+## This <a href="https://dorahacks.io/hackathon/ftc-2024/winner">Project </a>won the 2nd Prize in the Decentralized AI on near track for the Funding the commons Hackathon 
+
 <center><img src="./images/FederNear.png" alt="Federnear logo" height="220px"></img></center>
 
 <center>Read our wonderful docs <a href="https://federnear.gitbook.io/federnear">Here</a></center>
