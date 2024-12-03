@@ -4,13 +4,14 @@
 # FederNear: Privacy-Preserving Federated Learning Platform
 
 
-## This <a href="https://dorahacks.io/hackathon/ftc-2024/winner">Project </a>won the 2nd Prize in the Decentralized AI on near track for the Funding the commons Hackathon 
+## This <a href="https://dorahacks.io/hackathon/ftc-2024/winner">Project </a>won the 2nd Prize in the Decentralized AI on near track for the Funding the commons Hackathon held online on dorahacks
 
 <center><img src="./images/FederNear.png" alt="Federnear logo" height="220px"></img></center>
 
 <center>Read our wonderful docs <a href="https://federnear.gitbook.io/federnear">Here</a></center>
 
 FederNear is a decentralized platform built on the NEAR blockchain, enabling secure, privacy-preserving model training on distributed datasets. It ensures that sensitive data remains private by leveraging Pedersen commitments to keep model parameters (weights and biases) confidential during training.
+
 
 
 
